@@ -1,0 +1,23 @@
+{
+  "name": "bergen-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "gen": "node generator.js",
+    "gen:test": "node generator-test.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^7.1.5",
+    "fs-extra": "^8.1.0",
+    "node-latex": "^2.6.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "morgan": "^1.9.1"
+  }
+}

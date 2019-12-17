@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-25mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots\dots\dots }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+\section{Matematika I}
+\subsection{Projekt - zadanie úloh}
+\pr Zobrazte v rovine definièný obor funkcie $$f(x,y)=\ln\left(\frac{x-y+1}{x^2+y^2-4}\right).$$
+
+\pr Nájdite lokálne extrémy funkcie $$f(x,y)=3x^2y+xy^2-6xy.$$
+
+\pr Urète viazané extrémy funkcie $$f(x,y)=2x^2+4y^2$$ na hraniciach oblasti $M$, ktorá je daná $$x^2+y^2\leqq 9.$$
+
+\pr Pomocou rezov jednotlivými rovinami zistite o aké 3D útvary ide:
+
+\begin{enumerate}
+\item[a)] $x\sp{2}-81y\sp{2}+9z\sp{2}-8x-162y-36z-110=0$.
+\item[b)] $4y\sp{2}+x\sp{2}+z\sp{2}+12z+35=0$.
+\end{enumerate}
+\end{document}

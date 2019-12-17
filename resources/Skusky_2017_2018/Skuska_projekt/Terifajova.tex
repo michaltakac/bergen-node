@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-25mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots\dots\dots }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+\section{Matematika I}
+\subsection{Projekt - zadanie úloh}
+\pr Zobrazte v rovine definièný obor funkcie $$f(x,y)=\frac{\ln(1-x^2)}{\sqrt{4-x^2-y^2}}.$$
+
+\pr Nájdite lokálne extrémy funkcie $$f(x,y)=x^4+y^4-x^2-2xy-y^2.$$
+
+\pr Urète viazané extrémy funkcie $$f(x,y)=x^4+y^4-x^2-2xy-y^2$$ na hraniciach oblasti $M$, ktorá je daná $$M=\{[x,y]: 0\leqq x\leqq 4, 0\leqq y\leqq 4\}.$$
+
+\pr Nájdite všeobecné riešenie diferenciálnej rovnice $$y^{\prime\prime}-2y^{\prime}+y=q(x),$$
+ak
+\begin{enumerate}
+\item[a)] $g(x)=x^2+3x$.
+\item[b)] $g(x)=e^{x}(x+4)$.
+\item[c)] $g(x)=2x\cos x$.
+\item[d)] $g(x)=e^{2x}\sin x$.
+\end{enumerate}
+\end{document}

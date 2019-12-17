@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\pr  Daná je funkcia $f(x,y)=x^3+3xy^2-51x-24y$ a oblas $M$. \\
+Oblas $M$ je mnohouholník $ABCD$, ktorého vrcholy majú súradnice $A=[0,0]$, $B=[6,0]$, $C=[2,2]$ a $D=[6,4]$.
+\begin{enumerate}
+\item[a)] Naèrtnite oblas $M$: 
+
+\textbf{Náèrt:}
+\vspace{5cm}
+
+\textbf{Pomocou rovníc popíšte hranice oblasti $M$:}
+\begin{enumerate}
+\item $AB$ \gr
+\item $AC$ \gr
+\item $BD$ \gr
+\item $CD$ \gr
+\end{enumerate}
+
+\item[b)]Nájdite lokálne extrémy funkcie v $M$.\\
+\hspace{5cm} \textbf{Doplòte odpoveï:}
+Funkcia $f(x,y)$ má v bode \gr lokálne \gr
+\medskip
+
+\item[c)] Nájdite viazané lokálne extrémy funkcie na hraniciach oblasti $M$.\\
+Na hranici
+\begin{enumerate}
+\item $AB$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item $AC$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item $BD$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item $CD$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\end{enumerate}
+\item[d)] Nájdite najväèšiu a najmenšiu hodnotu funkcie $f(x,y)$ na oblasti $M$.\\
+
+\textbf{Najväèšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\textbf{Najmenšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\end{enumerate}
+
+\end{document}

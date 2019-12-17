@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-25mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots\dots\dots }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+\section{Matematika I}
+\subsection{Projekt - zadanie úloh}
+\pr Zobrazte v rovine definièný obor funkcie $$f(x,y)=\arcsin(x^2+y^2-2).$$
+
+\pr Nájdite lokálne extrémy funkcie $$f(x,y)=e^{x^2-y}(5-2x+y).$$
+
+\pr Urète viazané extrémy funkcie $$f(x,y)=4x+6y-x^2-y^2$$ na hraniciach oblasti $M$, ktorá je daná $$M=\{[x,y]: 0\leqq x\leqq 4, 0\leqq y\leqq 5\}.$$
+
+\pr Nájdite všeobecné riešenie diferenciálnej rovnice $$y^{\prime\prime}+3y^{\prime}-4y=q(x),$$
+ak
+\begin{enumerate}
+\item[a)] $g(x)=2$.
+\item[b)] $g(x)=e^{-x}(2x+1)$.
+\item[c)] $g(x)=10xe^{x}$.
+\item[d)] $g(x)=\cos x$.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-25mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots\dots\dots }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+\section{Matematika I}
+\subsection{Projekt - zadanie úloh}
+\pr Zobrazte v rovine definièný obor funkcie $$f(x,y)=\ln(y-x)+\ln(x+y).$$
+
+\pr Nájdite lokálne extrémy funkcie $$f(x,y)=x^2+y^2+3xy+2.$$
+
+\pr Urète viazané extrémy funkcie $$f(x,y)=x^2+y^2+3xy+2$$ na hraniciach oblasti $M$, ktorá je obmedzená grafmi funkcií $y=\vert x\vert$ a $y=2$.
+
+\pr Nájdite všeobecné riešenie diferenciálnej rovnice $$y^{\prime\prime}+y^{\prime}=q(x),$$
+ak
+\begin{enumerate}
+\item[a)] $g(x)=2x^2-3$.
+\item[b)] $g(x)=e^{-2x}$.
+\item[c)] $g(x)=4xe^{x}$.
+\item[d)] $g(x)=2\cos {2x}-\sin{2x}$.
+\end{enumerate}
+\end{document}
