@@ -1,0 +1,118 @@
+
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\newenvironment{itemize*}
+{\begin{itemize}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}}
+{\end{itemize}}
+
+\newenvironment{enumerate*}
+{\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}}
+{\end{enumerate}}
+
+
+\phantom{a}
+
+\centerline{\textbf{\Large Matematika I}}
+\smallskip
+\centerline{Séria úloh 18}
+\vskip0.5cm
+
+\medskip
+
+\pr (11b) Daná je všeobecná rovnica kužeľosečky $9x^2+25y^2-54x-100y-44=0$.\\
+\textbf{Doplňte}
+\begin{enumerate}
+\item[a)] (2b) Stredová rovnica kužeľosečky je\gr
+\item[b)] (1b) Typ kužeľosečky je \gr
+\item[c)] (3b) Popíšte (ak existujú):
+\begin{enumerate}
+\item[$c_1$)] dĺžka hlavnej poloosi je \gr
+\item[$c_2$)] dĺžka vedľajšej poloosi je \gr
+\item[$c_3$)] excentricita je \gr
+\end{enumerate}
+\item[d)] (4b) Napíšte súradnice (ak existujú):
+\begin{itemize}
+\item[$d_1$)] stredu kužeľosečky \gr
+\item[$d_2$)] hlavných vrcholov kužeľosečky \gr
+\item[$d_3$)] vedľajších vrcholov kužeľosečky \gr
+\item[$d_4$)] súradnice ohniska resp. ohnísk kužeľosečky \gr
+\end{itemize}
+\item[e)] (1b) Znázornite kužeľosečku a v náčrte popíšte jej významné prvky.
+\end{enumerate}
+
+\newpage
+
+\pr (2b) Vyberte funkciu, ktorej definičný obor je znázornený na nasledujúcom obrázku.
+
+\begin{multicols}{2}
+\scalebox{0.65}{\includegraphics{Df1.pdf}}
+
+\begin{itemize}
+\item[a)] $\displaystyle f(x,y)= \ln{(9-x^2-y^2)}+\ln{(x^2-y^2)}$
+\item[b)] $\displaystyle f(x,y)= \sqrt{9-x^2-y^2}+\ln{(x^2-y^2)}$
+\item[c)] $\displaystyle f(x,y)= \sqrt{9-x^2-y^2}+\ln{(x^2+y^2)}$
+\item[d)] $\displaystyle f(x,y)= \sqrt{9-x^2-y^2}+\sqrt{x^2-y^2}$
+\end{itemize}
+\end{multicols}
+
+\pr (6b) Vypočítajte $$\displaystyle \iint\limits_{M}{xy} \ \mathrm{d}x \mathrm{d}y,$$ kde množina $M$ je trojuholník s vrcholmi $A=[1,1]$, $B=[2,1]$ a $C=[2,3]$.
+
+\begin{enumerate}
+\item[]\textbf{Výsledok:}\gr
+\end{enumerate}
+
+\pr (4b) Toto je príklad typu F
+
+text text text \\ \\
+
+\pr (5b) Toto je príklad typu E
+
+text text text \\ \\
+
+\pr (6b) Toto je príklad typu C
+
+text text text \\ \\
+
+\pr (7b) Toto je príklad typu G
+
+text text text \\ \\
+
+\pr (8b) Toto je príklad typu C
+
+text text text \\ \\
+
+\pr (9b) Toto je príklad typu F
+
+text text text \\ \\
+
+
+\end{document}

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "electron .",
     "gen": "node generator.js",
+    "gen:series": "node generator-series.js",
     "gen:test": "node generator-test.js"
   },
   "author": "",
