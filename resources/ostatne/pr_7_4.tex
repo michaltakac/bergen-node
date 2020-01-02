@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\newenvironment{itemize*}
+ {\begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{itemize}}
+
+\newenvironment{enumerate*}
+ {\begin{enumerate}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{enumerate}}
+
+\pr (6b) Nájdite rovnicu dotykovej roviny $\tau$ ku grafu funkcie 
+$\displaystyle f(x,y)=\sqrt{14-x^2-y^2}$ \\ 
+\hspace*{1.4cm} v bode $T=\left[3,1, z_{0}\right]$.
+
+\begin{enumerate}
+\item[] (2b) Nájdite $z_0$ a  \textbf{uveďte súradnice dotykového bodu}: \gr
+\item[] (4b) Všeobecná \textbf{rovnica} dotykovej roviny $\tau$ je:\gr
+\end{enumerate}
+
+\end{document}
