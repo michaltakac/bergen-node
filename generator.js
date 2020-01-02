@@ -123,7 +123,7 @@ async function prepareProblem(problemIndex, currentIndex) {
 
 function generator(currentIndex) {
   return new Promise(async (resolve, reject) => {
-    const fileName = `test_ing_${currentIndex}`;
+    const fileName = `test_ing_${currentIndex + 1}`;
 
     const [pr1, pr2, pr3, pr4, pr5, pr6, pr7, pr8, pr9] = await Promise.all([
       await prepareProblem(1, currentIndex),
