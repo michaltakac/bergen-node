@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\newenvironment{itemize*}
+ {\begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{itemize}}
+
+\newenvironment{enumerate*}
+ {\begin{enumerate}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{enumerate}}
+
+\pr (27b) Daná je funkcia 
+$f(x,y) = 4x+6y-x^2-y^2$ 
+a oblasť $M$. \\
+Oblasť $M$ je mnohouholník $ABCD$ s vrcholmi  
+$A=[0,0]$, $B=[4,0]$, $C=[4,5]$ a $D=[0,5]$.
+
+\begin{enumerate}
+\item[a)] Načrtnite oblasť $M$:
+
+\textbf{Náčrt:}
+\vspace{5cm}
+
+\textbf{Pomocou matematických vzťahov popíšte hranice oblasti $M$:}
+\begin{enumerate}
+\item (2b) $AB$ \gr
+\item (2b) $BC$ \gr
+\item (2b) $CD$ \gr
+\item (2b) $AD$ \gr
+\end{enumerate}
+
+\item[b)](5b) Nájdite lokálne extrémy danej funkcie $f(x, y)$ v oblasti $M$. \\
+Ak hľadané lokálne extrémy nie sú, napíšte \uv{nie sú}.\\[1ex]
+\hspace{5cm} \textbf{Doplňte odpoveď:}
+Funkcia $f(x,y)$ má v bode \gr lokálne \gr
+\medskip
+
+\item[c)] Nájdite viazané lokálne extrémy danej funkcie $f(x, y)$ na hraniciach oblasti $M$.  
+Ak hľadaný lokálny extrém nejestvuje, napíšte \uv{nie je}.
+
+\begin{enumerate}
+\item (3b) Na hranici $AB$ má funkcia $f(x,y)$  v bode \gr viazané lokálne \gr
+\item (3b) Na hranici $BC$ má funkcia $f(x,y)$  v bode \gr viazané lokálne \gr
+\item (3b) Na hranici $CD$ má funkcia $f(x,y)$  v bode \gr viazané lokálne \gr
+\item (3b) Na hranici $AD$ má funkcia $f(x,y)$  v bode \gr viazané lokálne \gr
+\end{enumerate}
+\item[d)] (2b) Nájdite najväčšiu a najmenšiu hodnotu funkcie $f(x,y)$ na oblasti $M$.\\
+
+\textbf{Najväčšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\textbf{Najmenšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\end{enumerate}
+
+\end{document}
