@@ -1,0 +1,53 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "index.js",
+  "basePath": "matematikai/serie",
+  "paths": {
+    "ROOT": "/Users/michaltakac/Projects/matematika/bergen-node/web",
+    "SRC": "/Users/michaltakac/Projects/matematika/bergen-node/web/src",
+    "DIST": "/Users/michaltakac/Projects/matematika/bergen-node/web/dist",
+    "ASSETS": "/Users/michaltakac/Projects/matematika/bergen-node/web/dist",
+    "PLUGINS": "/Users/michaltakac/Projects/matematika/bergen-node/web/plugins",
+    "TEMP": "/Users/michaltakac/Projects/matematika/bergen-node/web/tmp",
+    "ARTIFACTS": "/Users/michaltakac/Projects/matematika/bergen-node/web/artifacts",
+    "PUBLIC": "/Users/michaltakac/Projects/matematika/bergen-node/web/public",
+    "NODE_MODULES": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules",
+    "EXCLUDE_MODULES": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules",
+    "PACKAGE": "/Users/michaltakac/Projects/matematika/bergen-node/web/package.json",
+    "HTML_TEMPLATE": "/Users/michaltakac/Projects/matematika/bergen-node/web/dist/index.html",
+    "STATIC_DATA": "/Users/michaltakac/Projects/matematika/bergen-node/web/dist/staticData"
+  },
+  "plugins": [
+    "/Users/michaltakac/Projects/matematika/bergen-node/web"
+  ],
+  "siteRoot": "/",
+  "publicPath": "/matematikai/serie/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}
