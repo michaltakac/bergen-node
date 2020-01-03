@@ -49,7 +49,7 @@
 \medskip
 
 \pr (7b) Daná je všeobecná rovnica kužeľosečky
-$2x^2+8x-3y^2+12y-16=0$.
+$4x^2-9y^2+18y-45 = 0$.
 
 \medskip
 
@@ -70,46 +70,45 @@ $2x^2+8x-3y^2+12y-16=0$.
 \newpage
 
 \pr (2b) Vyberte funkciu, ktorej definičný obor je znázornený na obrázku.
-
 \begin{multicols}{2}
 \noindent
-\includegraphics{kruznica1.pdf}
-
+\includegraphics[width=6cm]{kruznica4.pdf}
 \noindent
 \begin{itemize}
-\item[a)] $\displaystyle f(x,y)= \sqrt{x}+\ln{(4-x^2-y^2)}$
-\item[b)] $\displaystyle f(x,y)= \arcsin x+\sqrt{4-x^2-y^2}$ % OK
-\item[c)] $\displaystyle f(x,y)= \frac{\ln(x+1)}{\sqrt{4-x^2-y^2}}$
-\item[d)] $\displaystyle f(x,y)= \frac{\arcsin{(x+y)}}{\sqrt{4-x^2-y^2}}$
+\item[a)] $\displaystyle f(x,y)= \frac{\ln{(x^2+y^2-1)}}{\sqrt{4-x^2-y^2}}$
+\item[b)] $\displaystyle f(x,y)= \frac{\ln{(4-x^2-y^2)}}{\sqrt{x^2+y^2-1}}$
+\item[c)] $\displaystyle f(x,y)= \frac{\sqrt{x^2+y^2-1}}{\ln{(4-x^2-y^2)}}$
+\item[d)] $\displaystyle f(x,y)= \frac{\sqrt{4-x^2-y^2}}{\ln(x^2+y^2-1)}$
 \end{itemize}
 \end{multicols}
 
-\pr (6b) Vypočítajte $$\displaystyle \iint\limits_{M}{xy} \ \mathrm{d}x \mathrm{d}y,$$ kde množina $M$ je trojuholník s vrcholmi $A=[1,1]$, $B=[1,2]$ a $C=[2,2]$.
+\pr (6b) Vypočítajte $$\displaystyle \iint\limits_{M}{x^2y} \ \mathrm{d}x \mathrm{d}y,$$ kde množina $M$ je obdĺžnik s vrcholmi $A=[1,1]$, $B=[2,1]$, $C=[2,2]$ a $D=[1,2]$.
 
 \begin{enumerate}
 \item[]\textbf{Výsledok:}\gr
 \end{enumerate}
 
-\pr (4b) Bod $M$ má v pravouhlej súradnicovej sústave súradnice:  $M=[3,\sqrt{3}, 3]$.
+\pr (4b) Bod $M$ má v cylindrickej súradnicovej sústave nasledujúce súradnice: $\displaystyle M=\left[1,\frac{\pi}{6},-1\right]$.
 
 \begin{enumerate}
 \item[a)] (2b) Vyberte správnu odpoveď:\\
-Súradnice bodu $M$ v cylindrickej súradnicovej sústave sú:
+Súradnice bodu $M$ v pravouhlej súradnicovej sústave sú:
 
+\begin{multicols}{2}
+\noindent
+\begin{itemize}
+\item[a)] $M=\left[\frac{\sqrt{3}}{2},\frac{1}{2},-1\right]$
+\item[b)] $M=\left[\frac{\sqrt{3}}{2},-\frac{1}{2},-1\right]$
+\end{itemize}
 
 \noindent
 \begin{itemize}
-\begin{multicols}{2}
-\item[a)]  $\displaystyle M=[2\sqrt{3}, \, \frac{\pi}{6}, \, 3]$
-\item[b)]  $\displaystyle M=[2\sqrt{3}, \, \frac{\pi}{3},  \, 3]$
-
-\item[c)]  $\displaystyle M=[2\sqrt{3}, \,-\frac{\pi}{3},  \, 3]$
-\item[d)]  $\displaystyle M=[2\sqrt{3}, \, -\frac{\pi}{6},  \, 3]$
-\end{multicols}
+\item[c)] $M=\left[-\frac{\sqrt{3}}{2},\frac{1}{2},-1\right]$
+\item[d)] $M=\left[-\frac{\sqrt{3}}{2},-\frac{1}{2},-1\right]$
 \end{itemize}
+\end{multicols}
 
-
-\item[b)] (2b) Znázornite tento bod $M$ v cylindrickej súradnicovej sústave.
+\item[b)] (2b) Znázornite tento bod $M$ v pravouhlej súradnicovej sústave.
 
 \begin{enumerate}
 \item[]\textbf{Náčrt:}
@@ -121,7 +120,7 @@ Súradnice bodu $M$ v cylindrickej súradnicovej sústave sú:
 \bigskip
 
 \pr (8b) Daná je lineárna obyčajná diferenciálna rovnica (LODR)
-$y^{\prime\prime}(x)+y(x)= 3/sin x$.
+$y^{\prime\prime}(x) +6y^{\prime}(x)= 1$.
 
 \begin{enumerate}
 \item[a)](2b) Napíšte charakteristickú rovnicu k danej diferenciálnej rovnici.
@@ -148,32 +147,29 @@ $y^{\prime\prime}(x)+y(x)= 3/sin x$.
 \textbf{Všeobecné riešenie danej LODR je} \gr
 \end{enumerate}
 
-\pr (4b)
-Pomocou priamky $y=x$ a paraboly $y=x^2$ ukážte, že limita neexistuje
+\pr (4b) Vypočítajte, ak existuje
 
 $$
 \lim\limits_{
-[x,y]\rightarrow [0,0]}
-\frac{3x^2y}{x^4+y^2}.
+[x,y]\rightarrow [1,1]}
+\frac{x-1}{x+y-2}.
 $$
-
 \begin{enumerate}
 \item[]\textbf{Výsledok:}\gr
 \end{enumerate}
 
-\pr (6b) Nájdite rovnicu dotykovej roviny $\tau$ ku grafu funkcie
-$\displaystyle f(x,y)=\sqrt{x^2+y^2}-xy$ \\
-\hspace*{1.4cm} v bode $T=\left[3,4, z_{0}\right]$.
+\pr (6b) Napíšte všeobecnú rovnicu dotykovej roviny ku grafu funkcie $$f(x,y)=x^2+y^2$$ ak hľadaná dotyková rovina je rovnobežná s rovinou $\sigma: 2x+y+3z=1$.
 
 \begin{enumerate}
-\item[] (2b) Nájdite $z_0$ a  \textbf{uveďte súradnice dotykového bodu}: \gr
-\item[] (4b) Všeobecná \textbf{rovnica} dotykovej roviny $\tau$ je:\gr
+
+\item[]\textbf{Súradnice dotykového bodu sú:} \gr
+\item[]\textbf{Všeobecná rovnica dotykovej roviny je:} \gr
 \end{enumerate}
 
 \pr (6b) Daná je funkcia
-$\displaystyle f(x,y)=\frac{1}{x+y^2}$,
-bod $\displaystyle A=[1, \, 2]$
-a vektor $\displaystyle \vec{l}=\left(0, \, 2\right)$.
+$\displaystyle f(x,y)=\dfrac{x}{y^2}$,
+bod $\displaystyle A=[1, \,2 ]$
+a vektor $\displaystyle \vec{l}=\left(-1, \, 2\right)$.
 
 \begin{enumerate}
 \item[a)] (3b) Nájdite gradient funkcie $f(x,y)$ v bode $A$.
