@@ -1,11 +1,12 @@
 {
-  "name": "bergen-node",
+  "name": "bergen",
   "version": "1.0.0",
   "description": "Generator for tests and series from TeX sources.",
   "main": "main.js",
+  "bin": "./main.js",
   "scripts": {
-    "gen": "node generator-exams.js",
-    "gen:series": "node generator-series.js"
+    "exams": "node generator-exams.js",
+    "series": "node generator-series.js"
   },
   "author": "Michal Takac <takacmichal92@gmail.com>",
   "license": "MIT",
@@ -16,13 +17,14 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "date-fns": "^2.8.1",
+    "minimist": "^1.2.0",
     "morgan": "^1.9.1",
     "node-latex": "^2.6.3"
   },
   "pkg": {
     "exams": "exams/**/*",
     "series": "series/**/*",
-    "skusky_zdrojaky": "skusky_zdrojaky/**/*",
-    "skusky_zdrojaky_testovacie": "skusky_zdrojaky_testovacie/**/*"
+    "surces": "surces/**/*",
+    "web": "web/**/*"
   }
 }

@@ -3,6 +3,8 @@ const fs = require("fs");
 const fse = require("fs-extra");
 const { join } = require("path");
 const { format } = require('date-fns');
+const { sk } = require('date-fns/locale');
+const argv = require('minimist')(process.argv.slice(2));
 const generateDoc = require("./document-exam");
 
 const currentDateTime = format(new Date(), "yyyy-MM-dd_hh-mm-ss");
@@ -164,7 +166,8 @@ async function main() {
       ]);
 
       const texSource = await generateDoc({
-        seriesNumber: currentIndex + 1,
+        time: argv.t && format(new Date(argv.t), "hh:mm", { locale: sk }) || format(new Date("2020-01-15T09:00"), "hh:mm", { locale: sk }),
+        date: argv.t && format(new Date(argv.t), "dd. MMMM", { locale: sk }) || format(new Date("2020-01-15T09:00"), "dd. MMMM", { locale: sk }),
         pr1,
         pr2,
         pr3,

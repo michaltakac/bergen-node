@@ -1,52 +1,26 @@
-const { app, BrowserWindow } = require('electron')
+#!/usr/bin/env node
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-let win
+const { exec } = require("child_process");
+var argv = require("minimist")(process.argv.slice(2));
 
-function createWindow () {
-  // Create the browser window.
-  win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true
-    }
-  })
+if (argv.help || argv.h) {
+  const help = `
+Bergen - Generator for tests and series from TeX sources.
+Made at FBERG TUKE by Michal Takac
 
-  // and load the index.html of the app.
-  win.loadFile('index.html')
+Options:
 
-  // Open the DevTools.
-  // win.webContents.openDevTools()
-
-  // Emitted when the window is closed.
-  win.on('closed', () => {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    win = null
-  })
+  -h, --help      Show this help.
+  -t, --time      Set time for exams in format: 2020-01-15T09:00
+  -s, --series    Generate series instead of exams.
+  `;
+  console.log(help);
+} else if (argv.series || argv.s) {
+  exec(`node generator-series.js`);
+} else {
+  if (argv.t || argv.time) {
+    exec(`npm run exams -- -t ${argv.t || argv.time}`);
+  } else {
+    exec(`npm run exams`);
+  }
 }
-
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
-
-// Quit when all windows are closed.
-app.on('window-all-closed', () => {
-  // On macOS it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
-
-app.on('activate', () => {
-  // On macOS it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  if (win === null) {
-    createWindow()
-  }
-})
