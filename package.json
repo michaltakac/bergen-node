@@ -22,9 +22,7 @@
     "node-latex": "^2.6.3"
   },
   "pkg": {
-    "exams": "exams/**/*",
-    "series": "series/**/*",
-    "surces": "surces/**/*",
-    "web": "web/**/*"
+    "assets": [ "exams/**/*", "series/**/*", "sources/**/*", "web/**/*" ],
+    "scripts": [ "**.js" ]
   }
 }
