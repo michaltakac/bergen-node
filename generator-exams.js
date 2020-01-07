@@ -3,7 +3,7 @@ const fs = require("fs");
 const fse = require("fs-extra");
 const { join } = require("path");
 const { format } = require('date-fns');
-const generateDoc = require("./document-serie");
+const generateDoc = require("./document-exam");
 
 const currentDateTime = format(new Date(), "yyyy-MM-dd_hh-mm-ss");
 
@@ -149,7 +149,7 @@ async function main() {
 
   function generator(currentIndex) {
     return new Promise(async (resolve, reject) => {
-      const fileName = `seria_ing_${currentIndex + 1}`;
+      const fileName = `test_ing_${currentIndex + 1}`;
 
       const [pr1, pr2, pr3, pr4, pr5, pr6, pr7, pr8, pr9] = await Promise.all([
         await prepareProblem(1, currentIndex),
@@ -177,15 +177,15 @@ async function main() {
       });
 
       try {
-        await fse.writeFile(join(__dirname, `series/${currentDateTime}/tex_sources/${fileName}.tex`), texSource);
+        await fse.writeFile(join(__dirname, `exams/${currentDateTime}/tex_sources/${fileName}.tex`), texSource);
       } catch (err) {
         reject(err);
         // return;
       }
 
-      const input = await fse.createReadStream(join(__dirname, `series/${currentDateTime}/tex_sources/${fileName}.tex`));
+      const input = await fse.createReadStream(join(__dirname, `exams/${currentDateTime}/tex_sources/${fileName}.tex`));
 
-      const output = await fse.createWriteStream(join(__dirname, `series/${currentDateTime}/${fileName}.pdf`));
+      const output = await fse.createWriteStream(join(__dirname, `exams/${currentDateTime}/${fileName}.pdf`));
 
       const options = {
         inputs: join(__dirname, "."),
@@ -198,18 +198,18 @@ async function main() {
         reject(err);
       });
       pdf.on("finish", () => {
-        resolve(`Séria úloh ${fileName}.pdf bola vygenerovaná.`);
+        resolve(`Test ${fileName}.pdf bol vygenerovaný.`);
       });
     });
   }
 
   function generateExams() {
-    if (!fs.existsSync("series")) {
-      fs.mkdirSync("series");
+    if (!fs.existsSync("exams")) {
+      fs.mkdirSync("exams");
     }
 
-    fs.mkdirSync(`series/${currentDateTime}`);
-    fs.mkdirSync(`series/${currentDateTime}/tex_sources`);
+    fs.mkdirSync(`exams/${currentDateTime}`);
+    fs.mkdirSync(`exams/${currentDateTime}/tex_sources`);
 
     let doStuff = function* doStuff(fn) {
       let i = 0;
