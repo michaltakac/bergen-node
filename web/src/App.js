@@ -18,8 +18,8 @@ class App extends Component {
 
   componentDidMount() {
     if (typeof window !== "undefined" && !this.state.isAuthorized) {
-      const fbergMath1Auth = localStorage.getItem("fbergMath1Auth");
-      const auth = JSON.parse(fbergMath1Auth);
+      const fbergMath1SerieAuth = localStorage.getItem("fbergMath1SerieAuth");
+      const auth = JSON.parse(fbergMath1SerieAuth);
 
       if (auth && auth.uid) {
         const nowInMs = new Date().getTime();

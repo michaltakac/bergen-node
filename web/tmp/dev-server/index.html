@@ -1,1 +1,39 @@
-<!DOCTYPE html><html lang="en-US" data-reactroot=""><head><meta charSet="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no"/></head><body><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en-US" data-reactroot="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    window.ga =
+      window.ga ||
+      function() {
+        (ga.q = ga.q || []).push(arguments);
+      };
+    ga.l = +new Date();
+    ga("send", "pageview");
+
+    if (window !== "undefined") {
+      const fbergMath1SerieAuth = localStorage.getItem("fbergMath1SerieAuth");
+      const auth = JSON.parse(fbergMath1SerieAuth);
+
+      ga("create", {
+        trackingId: "UA-39924303-4",
+        cookieDomain: "auto",
+        name: "matematikai-serie",
+        userId: `${(auth && auth.uid) || "undefined-user"}`,
+      });
+    } else {
+      ga("create", {
+        trackingId: "UA-39924303-4",
+        cookieDomain: "auto",
+        name: "matematikai-serie",
+      });
+    }
+  </script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <!-- End Google Analytics -->
+</html>

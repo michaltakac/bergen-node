@@ -2,24 +2,24 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.5",
-  "hash": "b607cc3267faba85c73b",
-  "time": 3488,
-  "builtAt": 1578064965124,
+  "hash": "ceb9e1997a538976d02f",
+  "time": 1420,
+  "builtAt": 1578576578964,
   "publicPath": "/matematikai/serie/",
   "outputPath": "/Users/michaltakac/Projects/matematika/bergen-node/web/dist",
   "assetsByChunkName": {
     "Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/browser/components/Default404": "templates/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/browser/components/Default404.7029d6cd.js",
-    "main": "main.b607cc32.js",
+    "main": "main.ceb9e199.js",
     "styles": [
-      "styles.69d08ae9.css",
-      "templates/styles.69d08ae9.js"
+      "styles.c93f359a.css",
+      "templates/styles.c93f359a.js"
     ],
     "vendors~main": "templates/vendors~main.1bfe8fc2.js"
   },
   "assets": [
     {
-      "name": "main.b607cc32.js",
-      "size": 8947,
+      "name": "main.ceb9e199.js",
+      "size": 8957,
       "chunks": [
         1
       ],
@@ -32,7 +32,7 @@
       "emitted": true
     },
     {
-      "name": "styles.69d08ae9.css",
+      "name": "styles.c93f359a.css",
       "size": 6628,
       "chunks": [
         2
@@ -60,7 +60,7 @@
       "emitted": true
     },
     {
-      "name": "templates/styles.69d08ae9.js",
+      "name": "templates/styles.c93f359a.js",
       "size": 81,
       "chunks": [
         2
@@ -97,10 +97,10 @@
         1
       ],
       "assets": [
-        "styles.69d08ae9.css",
-        "templates/styles.69d08ae9.js",
+        "styles.c93f359a.css",
+        "templates/styles.c93f359a.js",
         "templates/vendors~main.1bfe8fc2.js",
-        "main.b607cc32.js"
+        "main.ceb9e199.js"
       ],
       "children": {},
       "childAssets": {}
@@ -114,10 +114,10 @@
         1
       ],
       "assets": [
-        "styles.69d08ae9.css",
-        "templates/styles.69d08ae9.js",
+        "styles.c93f359a.css",
+        "templates/styles.c93f359a.js",
         "templates/vendors~main.1bfe8fc2.js",
-        "main.b607cc32.js"
+        "main.ceb9e199.js"
       ],
       "children": {},
       "childAssets": {}
@@ -241,14 +241,14 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 9698,
+      "size": 9718,
       "names": [
         "main"
       ],
       "files": [
-        "main.b607cc32.js"
+        "main.ceb9e199.js"
       ],
-      "hash": "a9c15701d4835ffbee06",
+      "hash": "54debf3b27a01fabe87e",
       "siblings": [
         2,
         3
@@ -265,7 +265,7 @@
           "name": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
           "index": 83,
           "index2": 91,
-          "size": 6582,
+          "size": 6602,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -343,7 +343,7 @@
               "name": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js",
               "index": 83,
               "index2": 91,
-              "size": 2308,
+              "size": 2323,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -419,7 +419,7 @@
               ],
               "optimizationBailout": [],
               "depth": 3,
-              "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from\"react\";import AuthForm from\"./AuthForm\";import\"./app.css\";function Link(_ref){var index=_ref.index;return React.createElement(\"li\",{style:{lineHeight:\"2rem\",fontSize:\"1.2rem\"}},React.createElement(\"a\",{href:\"https://matematika.fberg.tuke.sk/matematikai/serie/seria_ing_\".concat(index,\".pdf\")},\"S\\xE9ria \\xFAloh \",index));}var App=/*#__PURE__*/function(_Component){_inherits(App,_Component);function App(){var _getPrototypeOf2;var _this;_classCallCheck(this,App);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(App)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{isAuthorized:false});_defineProperty(_assertThisInitialized(_this),\"renderLinkList\",function(){var links=[];for(var i=1;i<22;i++){links.push(React.createElement(Link,{key:i,index:i}));}return React.createElement(\"ul\",{style:{listStyle:\"none\",padding:0,margin:0}},links);});return _this;}_createClass(App,[{key:\"componentDidMount\",value:function componentDidMount(){if(typeof window!==\"undefined\"&&!this.state.isAuthorized){var fbergMath1Auth=localStorage.getItem(\"fbergMath1Auth\");var auth=JSON.parse(fbergMath1Auth);if(auth&&auth.uid){var nowInMs=new Date().getTime();if(auth.loginTime+auth.expiresIn>nowInMs){this.setState({isAuthorized:true});}}}}},{key:\"render\",value:function render(){if(!this.state.isAuthorized){return React.createElement(AuthForm,null);}return React.createElement(\"section\",{style:{textAlign:\"center\"}},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"S\\xE9rie \\xFAloh z predmetu Matematika I\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),this.renderLinkList());}}]);return App;}(Component);export default App;"
+              "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from\"react\";import AuthForm from\"./AuthForm\";import\"./app.css\";function Link(_ref){var index=_ref.index;return React.createElement(\"li\",{style:{lineHeight:\"2rem\",fontSize:\"1.2rem\"}},React.createElement(\"a\",{href:\"https://matematika.fberg.tuke.sk/matematikai/serie/seria_ing_\".concat(index,\".pdf\")},\"S\\xE9ria \\xFAloh \",index));}var App=/*#__PURE__*/function(_Component){_inherits(App,_Component);function App(){var _getPrototypeOf2;var _this;_classCallCheck(this,App);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(App)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{isAuthorized:false});_defineProperty(_assertThisInitialized(_this),\"renderLinkList\",function(){var links=[];for(var i=1;i<22;i++){links.push(React.createElement(Link,{key:i,index:i}));}return React.createElement(\"ul\",{style:{listStyle:\"none\",padding:0,margin:0}},links);});return _this;}_createClass(App,[{key:\"componentDidMount\",value:function componentDidMount(){if(typeof window!==\"undefined\"&&!this.state.isAuthorized){var fbergMath1SerieAuth=localStorage.getItem(\"fbergMath1SerieAuth\");var auth=JSON.parse(fbergMath1SerieAuth);if(auth&&auth.uid){var nowInMs=new Date().getTime();if(auth.loginTime+auth.expiresIn>nowInMs){this.setState({isAuthorized:true});}}}}},{key:\"render\",value:function render(){if(!this.state.isAuthorized){return React.createElement(AuthForm,null);}return React.createElement(\"section\",{style:{textAlign:\"center\"}},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"S\\xE9rie \\xFAloh z predmetu Matematika I\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),this.renderLinkList());}}]);return App;}(Component);export default App;"
             },
             {
               "id": null,
@@ -427,7 +427,7 @@
               "name": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/AuthForm.js",
               "index": 91,
               "index2": 87,
-              "size": 4229,
+              "size": 4234,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -479,7 +479,7 @@
                   "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js",
                   "type": "harmony import specifier",
                   "userRequest": "./AuthForm",
-                  "loc": "1:2011-2019"
+                  "loc": "1:2026-2034"
                 }
               ],
               "usedExports": [
@@ -490,7 +490,7 @@
               ],
               "optimizationBailout": [],
               "depth": 4,
-              "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}var React=require(\"react\");var AuthForm=/*#__PURE__*/function(_React$Component){_inherits(AuthForm,_React$Component);function AuthForm(){var _getPrototypeOf2;var _this;_classCallCheck(this,AuthForm);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(AuthForm)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{username:null,password:null,error:null});_defineProperty(_assertThisInitialized(_this),\"handleUsernameChange\",function(e){_this.setState(_objectSpread({},_this.state,{username:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handlePwdChange\",function(e){_this.setState(_objectSpread({},_this.state,{password:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handleSubmit\",function(e){e.preventDefault();e.stopPropagation();var _this$state=_this.state,username=_this$state.username,password=_this$state.password;fetch(\"https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=\".concat(username,\"&password=\").concat(password)).then(function(response){if(response.ok){return response.json();}_this.setState(_objectSpread({},_this.state,{error:\"Skontrolujte prihlasovacie meno a heslo. Uživateľ s týmito údajmi neexistuje.\"}));return Promise.reject(response);}).then(function(data){if(data.count!==0){var uid=data[0].uid[0];var auth={uid:uid,loginTime:new Date().getTime(),expiresIn:2629746000// 1 mesiac\n};localStorage.setItem(\"fbergMath1Auth\",JSON.stringify(auth));_this.setState({username:null,password:null,error:null});window.location.reload(false);}})[\"catch\"](function(err){console.log(err);});});return _this;}_createClass(AuthForm,[{key:\"render\",value:function render(){return React.createElement(\"section\",{className:\"auth-body\"},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"Matematika\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),React.createElement(\"form\",{onSubmit:this.handleSubmit,className:\"auth-form\"},React.createElement(\"div\",null,React.createElement(\"label\",null,\"Jedine\\u010Dn\\xFD login\",React.createElement(\"br\",null),\"(cez rovnak\\xFD sa prihlasuje\\u0161 do MAISu):\"),React.createElement(\"input\",{name:\"username\",type:\"text\",placeholder:\"V tvare ab123xy\",onChange:this.handleUsernameChange})),React.createElement(\"div\",null,React.createElement(\"label\",null,\"Heslo:\"),React.createElement(\"input\",{name:\"pwd\",type:\"password\",onChange:this.handlePwdChange,placeholder:\"Heslo do MAISu\"})),React.createElement(\"div\",null,React.createElement(\"button\",{type:\"submit\"},\"Prihl\\xE1si\\u0165 sa\")),React.createElement(\"div\",{style:{marginTop:\"30px\"}},this.state.error)),React.createElement(\"p\",null,React.createElement(\"br\",null),React.createElement(\"br\",null),\"\\xA9 \",new Date().getFullYear(),\" FBERG TUKE\"));}}]);return AuthForm;}(React.Component);export{AuthForm as default};"
+              "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}var React=require(\"react\");var AuthForm=/*#__PURE__*/function(_React$Component){_inherits(AuthForm,_React$Component);function AuthForm(){var _getPrototypeOf2;var _this;_classCallCheck(this,AuthForm);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(AuthForm)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{username:null,password:null,error:null});_defineProperty(_assertThisInitialized(_this),\"handleUsernameChange\",function(e){_this.setState(_objectSpread({},_this.state,{username:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handlePwdChange\",function(e){_this.setState(_objectSpread({},_this.state,{password:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handleSubmit\",function(e){e.preventDefault();e.stopPropagation();var _this$state=_this.state,username=_this$state.username,password=_this$state.password;fetch(\"https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=\".concat(username,\"&password=\").concat(password)).then(function(response){if(response.ok){return response.json();}_this.setState(_objectSpread({},_this.state,{error:\"Skontrolujte prihlasovacie meno a heslo. Uživateľ s týmito údajmi neexistuje.\"}));return Promise.reject(response);}).then(function(data){if(data.count!==0){var uid=data[0].uid[0];var auth={uid:uid,loginTime:new Date().getTime(),expiresIn:2629746000// 1 mesiac\n};localStorage.setItem(\"fbergMath1SerieAuth\",JSON.stringify(auth));_this.setState({username:null,password:null,error:null});window.location.reload(false);}})[\"catch\"](function(err){console.log(err);});});return _this;}_createClass(AuthForm,[{key:\"render\",value:function render(){return React.createElement(\"section\",{className:\"auth-body\"},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"Matematika\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),React.createElement(\"form\",{onSubmit:this.handleSubmit,className:\"auth-form\"},React.createElement(\"div\",null,React.createElement(\"label\",null,\"Jedine\\u010Dn\\xFD login\",React.createElement(\"br\",null),\"(cez rovnak\\xFD sa prihlasuje\\u0161 do MAISu):\"),React.createElement(\"input\",{name:\"username\",type:\"text\",placeholder:\"V tvare ab123xy\",onChange:this.handleUsernameChange})),React.createElement(\"div\",null,React.createElement(\"label\",null,\"Heslo:\"),React.createElement(\"input\",{name:\"pwd\",type:\"password\",onChange:this.handlePwdChange,placeholder:\"Heslo do MAISu\"})),React.createElement(\"div\",null,React.createElement(\"button\",{type:\"submit\"},\"Prihl\\xE1si\\u0165 sa\")),React.createElement(\"div\",{style:{marginTop:\"30px\"}},this.state.error)),React.createElement(\"p\",null,React.createElement(\"br\",null),React.createElement(\"br\",null),\"\\xA9 \",new Date().getFullYear(),\" FBERG TUKE\"));}}]);return AuthForm;}(React.Component);export{AuthForm as default};"
             }
           ],
           "filteredModules": 0
@@ -807,10 +807,10 @@
         "styles"
       ],
       "files": [
-        "styles.69d08ae9.css",
-        "templates/styles.69d08ae9.js"
+        "styles.c93f359a.css",
+        "templates/styles.c93f359a.js"
       ],
-      "hash": "69d08ae9b1419cd6d605",
+      "hash": "c93f359a7b30aa2b6d41",
       "siblings": [
         1,
         3
@@ -881,7 +881,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 4,
-          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1578064962568\n      var cssReload = require(\"/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1578576578504\n      var cssReload = require(\"/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
         },
         {
           "id": "",
@@ -1148,7 +1148,7 @@
               "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1991-1996"
+              "loc": "1:2006-2011"
             },
             {
               "moduleId": 15,
@@ -1157,7 +1157,7 @@
               "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2034-2039"
+              "loc": "1:2049-2054"
             },
             {
               "moduleId": 15,
@@ -1166,7 +1166,7 @@
               "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2093-2098"
+              "loc": "1:2108-2113"
             },
             {
               "moduleId": 15,
@@ -1175,7 +1175,7 @@
               "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2193-2198"
+              "loc": "1:2208-2213"
             },
             {
               "moduleId": 15,
@@ -1184,7 +1184,7 @@
               "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2278-2287"
+              "loc": "1:2293-2302"
             },
             {
               "moduleId": 16,
@@ -1519,9 +1519,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -2273,9 +2273,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -2368,9 +2368,9 @@
           "chunks": [
             3
           ],
-          "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "issuerId": 71,
-          "issuerName": "../lib/bootstrapTemplates.js",
+          "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "issuerId": 42,
+          "issuerName": "../lib/bootstrapPlugins.js",
           "issuerPath": [
             {
               "id": 41,
@@ -2378,9 +2378,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             }
           ],
           "failed": false,
@@ -2602,7 +2602,7 @@
               "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
               "type": "harmony import specifier",
               "userRequest": "@babel/runtime/helpers/createClass",
-              "loc": "2:213-225"
+              "loc": "2:218-230"
             }
           ],
           "usedExports": [
@@ -3059,9 +3059,9 @@
           "chunks": [
             3
           ],
-          "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "issuerId": 71,
-          "issuerName": "../lib/bootstrapTemplates.js",
+          "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "issuerId": 42,
+          "issuerName": "../lib/bootstrapPlugins.js",
           "issuerPath": [
             {
               "id": 41,
@@ -3069,9 +3069,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             }
           ],
           "failed": false,
@@ -3130,9 +3130,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3196,9 +3196,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3262,9 +3262,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3333,9 +3333,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3399,9 +3399,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3475,9 +3475,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3556,9 +3556,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3632,9 +3632,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3779,9 +3779,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3860,9 +3860,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -3946,9 +3946,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4022,9 +4022,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4562,9 +4562,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4624,9 +4624,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4686,9 +4686,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4748,9 +4748,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4805,9 +4805,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4867,9 +4867,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4929,9 +4929,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -4991,9 +4991,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5048,9 +5048,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5110,9 +5110,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5182,9 +5182,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5249,9 +5249,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5321,9 +5321,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5393,9 +5393,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5470,9 +5470,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5542,9 +5542,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5619,9 +5619,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5701,9 +5701,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5778,9 +5778,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5855,9 +5855,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -5932,9 +5932,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -6009,9 +6009,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -6086,9 +6086,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -6153,9 +6153,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -6220,9 +6220,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -6277,9 +6277,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -6342,9 +6342,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -6399,9 +6399,9 @@
               "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
             },
             {
-              "id": 71,
-              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-              "name": "../lib/bootstrapTemplates.js"
+              "id": 42,
+              "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+              "name": "../lib/bootstrapPlugins.js"
             },
             {
               "id": 19,
@@ -7803,7 +7803,7 @@
           "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1991-1996"
+          "loc": "1:2006-2011"
         },
         {
           "moduleId": 15,
@@ -7812,7 +7812,7 @@
           "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2034-2039"
+          "loc": "1:2049-2054"
         },
         {
           "moduleId": 15,
@@ -7821,7 +7821,7 @@
           "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2093-2098"
+          "loc": "1:2108-2113"
         },
         {
           "moduleId": 15,
@@ -7830,7 +7830,7 @@
           "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2193-2198"
+          "loc": "1:2208-2213"
         },
         {
           "moduleId": 15,
@@ -7839,7 +7839,7 @@
           "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2278-2287"
+          "loc": "1:2293-2302"
         },
         {
           "moduleId": 16,
@@ -8174,9 +8174,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -8928,9 +8928,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -9023,9 +9023,9 @@
       "chunks": [
         3
       ],
-      "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-      "issuerId": 71,
-      "issuerName": "../lib/bootstrapTemplates.js",
+      "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+      "issuerId": 42,
+      "issuerName": "../lib/bootstrapPlugins.js",
       "issuerPath": [
         {
           "id": 41,
@@ -9033,9 +9033,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         }
       ],
       "failed": false,
@@ -9257,7 +9257,7 @@
           "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
           "type": "harmony import specifier",
           "userRequest": "@babel/runtime/helpers/createClass",
-          "loc": "2:213-225"
+          "loc": "2:218-230"
         }
       ],
       "usedExports": [
@@ -9549,7 +9549,7 @@
       "name": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js + 1 modules",
       "index": 83,
       "index2": 91,
-      "size": 6582,
+      "size": 6602,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -9627,7 +9627,7 @@
           "name": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js",
           "index": 83,
           "index2": 91,
-          "size": 2308,
+          "size": 2323,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -9703,7 +9703,7 @@
           ],
           "optimizationBailout": [],
           "depth": 3,
-          "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from\"react\";import AuthForm from\"./AuthForm\";import\"./app.css\";function Link(_ref){var index=_ref.index;return React.createElement(\"li\",{style:{lineHeight:\"2rem\",fontSize:\"1.2rem\"}},React.createElement(\"a\",{href:\"https://matematika.fberg.tuke.sk/matematikai/serie/seria_ing_\".concat(index,\".pdf\")},\"S\\xE9ria \\xFAloh \",index));}var App=/*#__PURE__*/function(_Component){_inherits(App,_Component);function App(){var _getPrototypeOf2;var _this;_classCallCheck(this,App);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(App)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{isAuthorized:false});_defineProperty(_assertThisInitialized(_this),\"renderLinkList\",function(){var links=[];for(var i=1;i<22;i++){links.push(React.createElement(Link,{key:i,index:i}));}return React.createElement(\"ul\",{style:{listStyle:\"none\",padding:0,margin:0}},links);});return _this;}_createClass(App,[{key:\"componentDidMount\",value:function componentDidMount(){if(typeof window!==\"undefined\"&&!this.state.isAuthorized){var fbergMath1Auth=localStorage.getItem(\"fbergMath1Auth\");var auth=JSON.parse(fbergMath1Auth);if(auth&&auth.uid){var nowInMs=new Date().getTime();if(auth.loginTime+auth.expiresIn>nowInMs){this.setState({isAuthorized:true});}}}}},{key:\"render\",value:function render(){if(!this.state.isAuthorized){return React.createElement(AuthForm,null);}return React.createElement(\"section\",{style:{textAlign:\"center\"}},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"S\\xE9rie \\xFAloh z predmetu Matematika I\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),this.renderLinkList());}}]);return App;}(Component);export default App;"
+          "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";import React,{Component}from\"react\";import AuthForm from\"./AuthForm\";import\"./app.css\";function Link(_ref){var index=_ref.index;return React.createElement(\"li\",{style:{lineHeight:\"2rem\",fontSize:\"1.2rem\"}},React.createElement(\"a\",{href:\"https://matematika.fberg.tuke.sk/matematikai/serie/seria_ing_\".concat(index,\".pdf\")},\"S\\xE9ria \\xFAloh \",index));}var App=/*#__PURE__*/function(_Component){_inherits(App,_Component);function App(){var _getPrototypeOf2;var _this;_classCallCheck(this,App);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(App)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{isAuthorized:false});_defineProperty(_assertThisInitialized(_this),\"renderLinkList\",function(){var links=[];for(var i=1;i<22;i++){links.push(React.createElement(Link,{key:i,index:i}));}return React.createElement(\"ul\",{style:{listStyle:\"none\",padding:0,margin:0}},links);});return _this;}_createClass(App,[{key:\"componentDidMount\",value:function componentDidMount(){if(typeof window!==\"undefined\"&&!this.state.isAuthorized){var fbergMath1SerieAuth=localStorage.getItem(\"fbergMath1SerieAuth\");var auth=JSON.parse(fbergMath1SerieAuth);if(auth&&auth.uid){var nowInMs=new Date().getTime();if(auth.loginTime+auth.expiresIn>nowInMs){this.setState({isAuthorized:true});}}}}},{key:\"render\",value:function render(){if(!this.state.isAuthorized){return React.createElement(AuthForm,null);}return React.createElement(\"section\",{style:{textAlign:\"center\"}},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"S\\xE9rie \\xFAloh z predmetu Matematika I\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),this.renderLinkList());}}]);return App;}(Component);export default App;"
         },
         {
           "id": null,
@@ -9711,7 +9711,7 @@
           "name": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/AuthForm.js",
           "index": 91,
           "index2": 87,
-          "size": 4229,
+          "size": 4234,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -9763,7 +9763,7 @@
               "moduleName": "/Users/michaltakac/Projects/matematika/bergen-node/web/src/App.js",
               "type": "harmony import specifier",
               "userRequest": "./AuthForm",
-              "loc": "1:2011-2019"
+              "loc": "1:2026-2034"
             }
           ],
           "usedExports": [
@@ -9774,7 +9774,7 @@
           ],
           "optimizationBailout": [],
           "depth": 4,
-          "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}var React=require(\"react\");var AuthForm=/*#__PURE__*/function(_React$Component){_inherits(AuthForm,_React$Component);function AuthForm(){var _getPrototypeOf2;var _this;_classCallCheck(this,AuthForm);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(AuthForm)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{username:null,password:null,error:null});_defineProperty(_assertThisInitialized(_this),\"handleUsernameChange\",function(e){_this.setState(_objectSpread({},_this.state,{username:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handlePwdChange\",function(e){_this.setState(_objectSpread({},_this.state,{password:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handleSubmit\",function(e){e.preventDefault();e.stopPropagation();var _this$state=_this.state,username=_this$state.username,password=_this$state.password;fetch(\"https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=\".concat(username,\"&password=\").concat(password)).then(function(response){if(response.ok){return response.json();}_this.setState(_objectSpread({},_this.state,{error:\"Skontrolujte prihlasovacie meno a heslo. Uživateľ s týmito údajmi neexistuje.\"}));return Promise.reject(response);}).then(function(data){if(data.count!==0){var uid=data[0].uid[0];var auth={uid:uid,loginTime:new Date().getTime(),expiresIn:2629746000// 1 mesiac\n};localStorage.setItem(\"fbergMath1Auth\",JSON.stringify(auth));_this.setState({username:null,password:null,error:null});window.location.reload(false);}})[\"catch\"](function(err){console.log(err);});});return _this;}_createClass(AuthForm,[{key:\"render\",value:function render(){return React.createElement(\"section\",{className:\"auth-body\"},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"Matematika\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),React.createElement(\"form\",{onSubmit:this.handleSubmit,className:\"auth-form\"},React.createElement(\"div\",null,React.createElement(\"label\",null,\"Jedine\\u010Dn\\xFD login\",React.createElement(\"br\",null),\"(cez rovnak\\xFD sa prihlasuje\\u0161 do MAISu):\"),React.createElement(\"input\",{name:\"username\",type:\"text\",placeholder:\"V tvare ab123xy\",onChange:this.handleUsernameChange})),React.createElement(\"div\",null,React.createElement(\"label\",null,\"Heslo:\"),React.createElement(\"input\",{name:\"pwd\",type:\"password\",onChange:this.handlePwdChange,placeholder:\"Heslo do MAISu\"})),React.createElement(\"div\",null,React.createElement(\"button\",{type:\"submit\"},\"Prihl\\xE1si\\u0165 sa\")),React.createElement(\"div\",{style:{marginTop:\"30px\"}},this.state.error)),React.createElement(\"p\",null,React.createElement(\"br\",null),React.createElement(\"br\",null),\"\\xA9 \",new Date().getFullYear(),\" FBERG TUKE\"));}}]);return AuthForm;}(React.Component);export{AuthForm as default};"
+          "source": "import _classCallCheck from\"@babel/runtime/helpers/classCallCheck\";import _createClass from\"@babel/runtime/helpers/createClass\";import _possibleConstructorReturn from\"@babel/runtime/helpers/possibleConstructorReturn\";import _getPrototypeOf from\"@babel/runtime/helpers/getPrototypeOf\";import _assertThisInitialized from\"@babel/runtime/helpers/assertThisInitialized\";import _inherits from\"@babel/runtime/helpers/inherits\";import _defineProperty from\"@babel/runtime/helpers/defineProperty\";function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}var React=require(\"react\");var AuthForm=/*#__PURE__*/function(_React$Component){_inherits(AuthForm,_React$Component);function AuthForm(){var _getPrototypeOf2;var _this;_classCallCheck(this,AuthForm);for(var _len=arguments.length,args=new Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}_this=_possibleConstructorReturn(this,(_getPrototypeOf2=_getPrototypeOf(AuthForm)).call.apply(_getPrototypeOf2,[this].concat(args)));_defineProperty(_assertThisInitialized(_this),\"state\",{username:null,password:null,error:null});_defineProperty(_assertThisInitialized(_this),\"handleUsernameChange\",function(e){_this.setState(_objectSpread({},_this.state,{username:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handlePwdChange\",function(e){_this.setState(_objectSpread({},_this.state,{password:e.target.value}));});_defineProperty(_assertThisInitialized(_this),\"handleSubmit\",function(e){e.preventDefault();e.stopPropagation();var _this$state=_this.state,username=_this$state.username,password=_this$state.password;fetch(\"https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=\".concat(username,\"&password=\").concat(password)).then(function(response){if(response.ok){return response.json();}_this.setState(_objectSpread({},_this.state,{error:\"Skontrolujte prihlasovacie meno a heslo. Uživateľ s týmito údajmi neexistuje.\"}));return Promise.reject(response);}).then(function(data){if(data.count!==0){var uid=data[0].uid[0];var auth={uid:uid,loginTime:new Date().getTime(),expiresIn:2629746000// 1 mesiac\n};localStorage.setItem(\"fbergMath1SerieAuth\",JSON.stringify(auth));_this.setState({username:null,password:null,error:null});window.location.reload(false);}})[\"catch\"](function(err){console.log(err);});});return _this;}_createClass(AuthForm,[{key:\"render\",value:function render(){return React.createElement(\"section\",{className:\"auth-body\"},React.createElement(\"h1\",{style:{marginBottom:\"-35px\"}},\"Matematika\"),React.createElement(\"h2\",null,\"FBERG TUKE\"),React.createElement(\"form\",{onSubmit:this.handleSubmit,className:\"auth-form\"},React.createElement(\"div\",null,React.createElement(\"label\",null,\"Jedine\\u010Dn\\xFD login\",React.createElement(\"br\",null),\"(cez rovnak\\xFD sa prihlasuje\\u0161 do MAISu):\"),React.createElement(\"input\",{name:\"username\",type:\"text\",placeholder:\"V tvare ab123xy\",onChange:this.handleUsernameChange})),React.createElement(\"div\",null,React.createElement(\"label\",null,\"Heslo:\"),React.createElement(\"input\",{name:\"pwd\",type:\"password\",onChange:this.handlePwdChange,placeholder:\"Heslo do MAISu\"})),React.createElement(\"div\",null,React.createElement(\"button\",{type:\"submit\"},\"Prihl\\xE1si\\u0165 sa\")),React.createElement(\"div\",{style:{marginTop:\"30px\"}},this.state.error)),React.createElement(\"p\",null,React.createElement(\"br\",null),React.createElement(\"br\",null),\"\\xA9 \",new Date().getFullYear(),\" FBERG TUKE\"));}}]);return AuthForm;}(React.Component);export{AuthForm as default};"
         }
       ],
       "filteredModules": 0
@@ -10013,9 +10013,9 @@
       "chunks": [
         3
       ],
-      "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-      "issuerId": 71,
-      "issuerName": "../lib/bootstrapTemplates.js",
+      "issuer": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+      "issuerId": 42,
+      "issuerName": "../lib/bootstrapPlugins.js",
       "issuerPath": [
         {
           "id": 41,
@@ -10023,9 +10023,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         }
       ],
       "failed": false,
@@ -10084,9 +10084,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10150,9 +10150,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10216,9 +10216,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10287,9 +10287,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10353,9 +10353,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10429,9 +10429,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10510,9 +10510,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10586,9 +10586,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10733,9 +10733,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10814,9 +10814,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10900,9 +10900,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -10976,9 +10976,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -11683,9 +11683,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -11745,9 +11745,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -11807,9 +11807,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -11869,9 +11869,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -11926,9 +11926,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -11988,9 +11988,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12050,9 +12050,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12112,9 +12112,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12169,9 +12169,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12231,9 +12231,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12303,9 +12303,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12370,9 +12370,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12442,9 +12442,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12514,9 +12514,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12591,9 +12591,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12663,9 +12663,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12740,9 +12740,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12822,9 +12822,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12899,9 +12899,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -12976,9 +12976,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13053,9 +13053,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13130,9 +13130,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13207,9 +13207,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13274,9 +13274,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13341,9 +13341,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13398,9 +13398,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13463,9 +13463,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -13520,9 +13520,9 @@
           "name": "multi ../lib/bootstrapPlugins.js ../lib/bootstrapTemplates.js ../lib/bootstrapApp.js"
         },
         {
-          "id": 71,
-          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapTemplates.js",
-          "name": "../lib/bootstrapTemplates.js"
+          "id": 42,
+          "identifier": "/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/babel-loader/lib/index.js??ref--4-oneOf-1-0!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-hot-loader/webpack.js!/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/react-static/lib/bootstrapPlugins.js",
+          "name": "../lib/bootstrapPlugins.js"
         },
         {
           "id": 19,
@@ -14927,7 +14927,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 4,
-      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1578064962568\n      var cssReload = require(\"/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1578576578504\n      var cssReload = require(\"/Users/michaltakac/Projects/matematika/bergen-node/web/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
     },
     {
       "id": 94,

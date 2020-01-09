@@ -5,8 +5,9 @@
   "main": "main.js",
   "bin": "./main.js",
   "scripts": {
-    "exams": "node generator-exams.js",
-    "series": "node generator-series.js"
+    "gen": "node main.js",
+    "build": "rm bergen && rm brgn && rm bergen.exe && pkg . --options max_old_space_size=4096",
+    "pkg": "pkg"
   },
   "author": "Michal Takac <takacmichal92@gmail.com>",
   "license": "MIT",
@@ -22,7 +23,17 @@
     "node-latex": "^2.6.3"
   },
   "pkg": {
-    "assets": [ "exams/**/*", "series/**/*", "sources/**/*", "web/**/*" ],
-    "scripts": [ "**.js" ]
+    "assets": [
+      "exams/**/*",
+      "exams/**/**/*",
+      "exams/**/**/**/*",
+      "series/**/*",
+      "series/**/**/*",
+      "series/**/**/**/*",
+      "sources/**/*"
+    ],
+    "scripts": [
+      "**.js"
+    ]
   }
 }

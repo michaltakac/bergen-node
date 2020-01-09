@@ -6,5 +6,5 @@
 // Get started at httsp://react-static.js.org
 
 export default {
-  basePath: 'matematikai/serie',
+  basePath: 'matematikai/serie'
 }

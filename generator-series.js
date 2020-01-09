@@ -198,7 +198,7 @@ async function main() {
         reject(err);
       });
       pdf.on("finish", () => {
-        resolve(`Séria úloh ${fileName}.pdf bola vygenerovaná.`);
+        resolve(`Problem set for practice named "${fileName}.pdf" was generated.`);
       });
     });
   }
@@ -222,11 +222,11 @@ async function main() {
     };
 
     Promise.all(doStuff(generator))
-      .then(data => console.log("complete:", data, passType))
+      .then(data => console.log("Log:", data, passType))
       .catch(err => console.log(err));
   }
 
   generateExams();
 }
 
-main();
+module.exports = main

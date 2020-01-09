@@ -778,7 +778,7 @@ function (_React$Component) {
             expiresIn: 2629746000 // 1 mesiac
 
           };
-          localStorage.setItem("fbergMath1Auth", JSON.stringify(auth));
+          localStorage.setItem("fbergMath1SerieAuth", JSON.stringify(auth));
 
           _this.setState({
             username: null,
@@ -907,8 +907,8 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       if (typeof window !== "undefined" && !this.state.isAuthorized) {
-        var fbergMath1Auth = localStorage.getItem("fbergMath1Auth");
-        var auth = JSON.parse(fbergMath1Auth);
+        var fbergMath1SerieAuth = localStorage.getItem("fbergMath1SerieAuth");
+        var auth = JSON.parse(fbergMath1SerieAuth);
 
         if (auth && auth.uid) {
           var nowInMs = new Date().getTime();

@@ -4,7 +4,6 @@ const fse = require("fs-extra");
 const { join } = require("path");
 const { format } = require('date-fns');
 const { sk } = require('date-fns/locale');
-const argv = require('minimist')(process.argv.slice(2));
 const generateDoc = require("./document-exam");
 
 const currentDateTime = format(new Date(), "yyyy-MM-dd_hh-mm-ss");
@@ -22,7 +21,7 @@ async function getTypesArray(dir) {
   return typesArr;
 }
 
-async function main() {
+async function main(time) {
   const [
     pr1TypesArr,
     pr2TypesArr,
@@ -166,8 +165,8 @@ async function main() {
       ]);
 
       const texSource = await generateDoc({
-        time: argv.t && format(new Date(argv.t), "hh:mm", { locale: sk }) || format(new Date("2020-01-15T09:00"), "hh:mm", { locale: sk }),
-        date: argv.t && format(new Date(argv.t), "dd. MMMM", { locale: sk }) || format(new Date("2020-01-15T09:00"), "dd. MMMM", { locale: sk }),
+        time: time && format(new Date(time), "hh:mm", { locale: sk }) || format(new Date("2020-01-15T09:00"), "hh:mm", { locale: sk }),
+        date: time && format(new Date(time), "dd. MMMM", { locale: sk }) || format(new Date("2020-01-15T09:00"), "dd. MMMM", { locale: sk }),
         pr1,
         pr2,
         pr3,
@@ -201,7 +200,7 @@ async function main() {
         reject(err);
       });
       pdf.on("finish", () => {
-        resolve(`Test ${fileName}.pdf bol vygenerovaný.`);
+        resolve(`Exam ${fileName}.pdf was generated.`);
       });
     });
   }
@@ -225,11 +224,11 @@ async function main() {
     };
 
     Promise.all(doStuff(generator))
-      .then(data => console.log("complete:", data, passType))
+      .then(data => console.log("Log:", data, passType))
       .catch(err => console.log(err));
   }
 
   generateExams();
 }
 
-main();
+module.exports = main

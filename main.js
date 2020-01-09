@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-const { exec } = require("child_process");
-var argv = require("minimist")(process.argv.slice(2));
+const argv = require("minimist")(process.argv.slice(2));
+const generateExams = require("./generator-exams");
+const generateSeries = require("./generator-series");
 
 if (argv.help || argv.h) {
   const help = `
@@ -16,11 +17,11 @@ Options:
   `;
   console.log(help);
 } else if (argv.series || argv.s) {
-  exec(`node generator-series.js`);
+  generateSeries();
 } else {
   if (argv.t || argv.time) {
-    exec(`npm run exams -- -t ${argv.t || argv.time}`);
+    generateExams(argv.t || argv.time);
   } else {
-    exec(`npm run exams`);
+    generateExams()
   }
 }

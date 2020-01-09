@@ -44,7 +44,7 @@ export default class AuthForm extends React.Component {
             expiresIn: 2629746000, // 1 mesiac
           };
 
-          localStorage.setItem("fbergMath1Auth", JSON.stringify(auth));
+          localStorage.setItem("fbergMath1SerieAuth", JSON.stringify(auth));
           this.setState({
             username: null,
             password: null,
