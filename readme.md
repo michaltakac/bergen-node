@@ -2,6 +2,10 @@
 
 Generator for exams and series from TeX sources. It's used for generating math tests and series.
 
+### Prerequisities
+
+You need to have TeX command-line tools installed on your computer (like https://miktex.org/). If you can compile TeX documents through programs like TeXStudio, TeXShop or similar, then you should be fine.
+
 ### Usage
 
 Use `./bergen -h` to show help with additional information on how to use this tool.
