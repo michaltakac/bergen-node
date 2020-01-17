@@ -5,8 +5,6 @@ const { join, dirname } = require("path");
 const { format } = require('date-fns');
 const generateDoc = require("./document-serie");
 
-const currentDateTime = format(new Date(), "yyyy-MM-dd_hh-mm-ss");
-
 async function getTypesArray(dir) {
   let typesArr = null;
 
@@ -23,6 +21,8 @@ async function getTypesArray(dir) {
 async function main() {
   // Use proper project folder when run as an executable or as nodejs script
   const projectFolder = process.pkg ? dirname(process.execPath) : __dirname;
+
+  const currentDateTime = format(new Date(), "yyyy-MM-dd_hh-mm-ss");
 
   const [
     pr1TypesArr,

@@ -6,8 +6,6 @@ const { format } = require('date-fns');
 const { sk } = require('date-fns/locale');
 const generateDoc = require("./document-exam");
 
-const currentDateTime = format(new Date(), "yyyy-MM-dd_hh-mm-ss");
-
 async function getTypesArray(dir) {
   let typesArr = null;
 
@@ -24,6 +22,8 @@ async function getTypesArray(dir) {
 async function main(time) {
   // Use proper project folder when run as an executable or as nodejs script
   const projectFolder = process.pkg ? dirname(process.execPath) : __dirname;
+
+  const currentDateTime = format(time ? new Date(time) : new Date(), "yyyy-MM-dd_hh-mm-ss");
 
   const [
     pr1TypesArr,
