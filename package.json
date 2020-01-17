@@ -1,12 +1,15 @@
 {
   "name": "bergen",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Generator for tests and series from TeX sources.",
   "main": "main.js",
   "bin": "./main.js",
   "scripts": {
     "gen": "node main.js",
-    "build": "rm bergen && rm brgn && rm bergen.exe && pkg . --options max_old_space_size=4096",
+    "clean": "rm -f bergen",
+    "clean:all": "rm -f bergen-win.exe && rm -f bergen-linux && rm -f bergen-macos",
+    "build": "npm run clean && pkg . --options max_old_space_size=4096 --output bergen",
+    "build:all": "npm run clean:all && pkg . --options max_old_space_size=4096",
     "pkg": "pkg"
   },
   "author": "Michal Takac <takacmichal92@gmail.com>",
@@ -25,15 +28,11 @@
   "pkg": {
     "assets": [
       "exams/**/*",
-      "exams/**/**/*",
-      "exams/**/**/**/*",
       "series/**/*",
-      "series/**/**/*",
-      "series/**/**/**/*",
       "sources/**/*"
     ],
     "scripts": [
-      "**.js"
+      "*.js"
     ]
   }
 }

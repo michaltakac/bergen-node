@@ -1,7 +1,7 @@
 const latex = require("node-latex");
 const fs = require("fs");
 const fse = require("fs-extra");
-const { join } = require("path");
+const { join, dirname } = require("path");
 const { format } = require('date-fns');
 const { sk } = require('date-fns/locale');
 const generateDoc = require("./document-exam");
@@ -22,6 +22,9 @@ async function getTypesArray(dir) {
 }
 
 async function main(time) {
+  // Use proper project folder when run as an executable or as nodejs script
+  const projectFolder = process.pkg ? dirname(process.execPath) : __dirname;
+
   const [
     pr1TypesArr,
     pr2TypesArr,
@@ -33,15 +36,15 @@ async function main(time) {
     pr8TypesArr,
     pr9TypesArr,
   ] = await Promise.all([
-    await getTypesArray(join(__dirname, "sources/pr1")),
-    await getTypesArray(join(__dirname, "sources/pr2")),
-    await getTypesArray(join(__dirname, "sources/pr3")),
-    await getTypesArray(join(__dirname, "sources/pr4")),
-    await getTypesArray(join(__dirname, "sources/pr5")),
-    await getTypesArray(join(__dirname, "sources/pr6")),
-    await getTypesArray(join(__dirname, "sources/pr7")),
-    await getTypesArray(join(__dirname, "sources/pr8")),
-    await getTypesArray(join(__dirname, "sources/pr9")),
+    await getTypesArray(join(projectFolder, "sources/pr1")),
+    await getTypesArray(join(projectFolder, "sources/pr2")),
+    await getTypesArray(join(projectFolder, "sources/pr3")),
+    await getTypesArray(join(projectFolder, "sources/pr4")),
+    await getTypesArray(join(projectFolder, "sources/pr5")),
+    await getTypesArray(join(projectFolder, "sources/pr6")),
+    await getTypesArray(join(projectFolder, "sources/pr7")),
+    await getTypesArray(join(projectFolder, "sources/pr8")),
+    await getTypesArray(join(projectFolder, "sources/pr9")),
   ]);
 
   const priklady = {
@@ -145,7 +148,7 @@ async function main(time) {
       type = pr.types[Math.floor(Math.random() * pr.count)];
     }
 
-    return fse.readFile(join(__dirname, `sources/pr${problemIndex}/${type}`), "utf8");
+    return fse.readFile(join(projectFolder, `sources/pr${problemIndex}/${type}`), "utf8");
   }
 
   function generator(currentIndex) {
@@ -179,18 +182,18 @@ async function main(time) {
       });
 
       try {
-        await fse.writeFile(join(__dirname, `exams/${currentDateTime}/tex_sources/${fileName}.tex`), texSource);
+        await fse.writeFile(join(projectFolder, `exams/${currentDateTime}/tex_sources/${fileName}.tex`), texSource);
       } catch (err) {
         reject(err);
         // return;
       }
 
-      const input = await fse.createReadStream(join(__dirname, `exams/${currentDateTime}/tex_sources/${fileName}.tex`));
+      const input = await fse.createReadStream(join(projectFolder, `exams/${currentDateTime}/tex_sources/${fileName}.tex`));
 
-      const output = await fse.createWriteStream(join(__dirname, `exams/${currentDateTime}/${fileName}.pdf`));
+      const output = await fse.createWriteStream(join(projectFolder, `exams/${currentDateTime}/${fileName}.pdf`));
 
       const options = {
-        inputs: join(__dirname, "."),
+        inputs: join(projectFolder, "."),
       };
 
       const pdf = latex(input, options);
