@@ -23,7 +23,7 @@ export default class AuthForm extends React.Component {
     e.stopPropagation();
     const { username, password } = this.state;
 
-    fetch(`https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=${username}&password=${password}`)
+    fetch(`https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`)
       .then(response => {
         if (response.ok) {
           return response.json();

@@ -759,7 +759,7 @@ function (_React$Component) {
       var _this$state = _this.state,
           username = _this$state.username,
           password = _this$state.password;
-      fetch("https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=".concat(username, "&password=").concat(password)).then(function (response) {
+      fetch("https://matematika.fberg.tuke.sk/api/v1/check-student-exists.php?username=".concat(encodeURIComponent(username), "&password=").concat(encodeURIComponent(password))).then(function (response) {
         if (response.ok) {
           return response.json();
         }
