@@ -169,7 +169,7 @@ async function main(time) {
 
       const texSource = await generateDoc({
         time: time && format(new Date(time), "hh:mm", { locale: sk }) || format(new Date("2020-01-15T09:00"), "hh:mm", { locale: sk }),
-        date: time && format(new Date(time), "dd. MMMM", { locale: sk }) || format(new Date("2020-01-15T09:00"), "dd. MMMM", { locale: sk }),
+        date: time && format(new Date(time), "dd. MMMM yyyy", { locale: sk }) || format(new Date("2020-01-15T09:00"), "dd. MMMM", { locale: sk }),
         pr1,
         pr2,
         pr3,
